@@ -1,4 +1,4 @@
-<mxfile host="www.draw.io" modified="2019-12-02T00:33:32.709Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="OdC-s7YAqz_R5FEADTR3" version="12.2.7" type="github" pages="3">
+<mxfile host="www.draw.io" modified="2019-12-03T05:36:22.179Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36" etag="y7HbEKutkJ04f4_NZJso" version="12.2.7" type="github" pages="3">
   <diagram name="Main-1" id="5cOg8ej0yZ3aYf5UXj4f">
     <mxGraphModel dx="1408" dy="748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -247,7 +247,16 @@
           <mxGeometry x="879" y="645" width="122" height="90" as="geometry"/>
         </mxCell>
         <mxCell id="B375BskBMubbX5btha5O-12" value="&lt;table border=&quot;1&quot; width=&quot;100%&quot; height=&quot;100%&quot; style=&quot;width:100%;height:100%;border-collapse:collapse;&quot;&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;Value 1&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;Value 2&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;Value 3&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;Value 4&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;Value 5&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;Value 6&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;Value 7&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;Value 8&lt;/td&gt;&lt;td align=&quot;center&quot;&gt;Value 9&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;strokeColor=#999999;fillColor=#ffffff;overflow=fill;rounded=0;shadow=0;dashed=0;fontFamily=Verdana;align=center;strokeWidth=1;labelBackgroundColor=none;" vertex="1" parent="B375BskBMubbX5btha5O-2">
-          <mxGeometry x="10" y="235" width="451" height="350" as="geometry"/>
+          <mxGeometry x="10" y="235" width="380" height="295" as="geometry"/>
+        </mxCell>
+        <mxCell id="CIHDcvp0Lj7S50MurnMy-0" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.user;" vertex="1" parent="B375BskBMubbX5btha5O-2">
+          <mxGeometry x="25" y="197" width="30" height="33" as="geometry"/>
+        </mxCell>
+        <mxCell id="CIHDcvp0Lj7S50MurnMy-1" value="nickname" style="text;html=1;points=[];align=center;verticalAlign=middle;spacingTop=-4;fontSize=18;fontFamily=Verdana;fontColor=#000000;" vertex="1" parent="B375BskBMubbX5btha5O-2">
+          <mxGeometry x="55" y="185" width="110" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="CIHDcvp0Lj7S50MurnMy-2" value="" style="text;html=1;points=[];align=center;verticalAlign=middle;spacingTop=-4;fontSize=18;fontFamily=Verdana;fontColor=#000000;fillColor=none;strokeColor=#000000;strokeWidth=1;" vertex="1" parent="B375BskBMubbX5btha5O-2">
+          <mxGeometry x="10" y="185" width="380" height="50" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
