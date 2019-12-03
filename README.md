@@ -30,3 +30,9 @@ UI : 모바일웹에서도 깔끔하게 떨어지게!!!!
 ##### UI 디자인 사이트
 
 [디자인 사이트 url](https://www.draw.io)
+
+##### super user 정보
+
+> admin // diff9663
+>
+> python manage.py changepassword 사용자id
