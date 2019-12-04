@@ -3,6 +3,18 @@
 
 ##### Hackathon Repository입니다.
 
+##### 프로젝트 CLONE 방법
+
+1. 작업할 디렉토리 생성  (ex: Perpect)
+
+2. git clone
+
+> cd Perpect
+
+> git clone https://github.com/psybex/Hackathon.git
+
+
+
 ##### 요구 spec
 
 로그인 및 회원관리
