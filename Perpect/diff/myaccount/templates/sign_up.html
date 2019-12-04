@@ -4,7 +4,8 @@
 
 <h1>Sing Up!</h1>
 
-<form>
+<form method="POST" action="{% url 'sign_up' %}">
+    {% csrf_token %}
     Username:
     <br>
     <input name="username" type="text" value="">

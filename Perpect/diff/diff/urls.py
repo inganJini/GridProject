@@ -24,7 +24,6 @@ urlpatterns = [
     path('', views.home, name = 'home'),
     path('sign_up', accountviews.sign_up, name='sign_up'),
     path('login', accountviews.login, name='login'),
-
-
+    
     path('social_account/login', include('allauth.urls')),
 ]

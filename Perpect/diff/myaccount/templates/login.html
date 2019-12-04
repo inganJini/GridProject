@@ -2,9 +2,15 @@
 
 {% block content %}
 
+{% if error %}
+{{ error }}
+<br>
+<br>
+{% endif %}
+
 <h1>Login</h1>
 
-<form>
+<form method="POST" action="{% url 'login'%}">
     Username:
     <br>
     <input name="username" type="text" value="">
