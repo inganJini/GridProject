@@ -49,8 +49,15 @@
             <li class="nav-item">
                 <a class="nav-item nav-link" href="{% url 'sign_up' %}">Sign Up</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+            </li>
         </ul>
       </div>
     </nav>
+    <div>
+      {% block content %}
+      {% endblock %}
+    </div>
 </body>
 </html>
