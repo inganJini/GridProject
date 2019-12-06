@@ -1,0 +1,38 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+{% if error %}
+{{ error }}
+<br>
+<br>
+{% endif %}
+
+<h1>Grid</h1>
+
+<div class="container">
+    <div class="row clearfix">
+         <div class="col-md-4">
+               item 1
+         </div>
+         <div class="col-md-4">
+               item 2
+         </div>
+         <div class="col-md-4">
+               item 3
+         </div>
+    </div>
+    <div class="row clearfix">
+         <div class="col-md-4">
+               item 1
+         </div>
+         <div class="col-md-4">
+               item 2
+         </div>
+         <div class="col-md-4">
+               item 3
+         </div>
+    </div>
+</div>
+
+{% endblock %}

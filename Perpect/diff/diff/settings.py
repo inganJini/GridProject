@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     'home.apps.HomeConfig',
     'myaccount.apps.MyaccountConfig',
+    'grid.apps.GridConfig',
 ]
 SITE_ID = 1
 
