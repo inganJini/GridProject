@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from home import views
 from myaccount import views as accountviews
+from grid import views as gridviews
 from django.contrib.auth.views import LoginView,LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name = 'home'),
+    #path('', views.home, name = 'home'),
+    path('', gridviews.grid, name='grid'),
     path('sign_up', accountviews.sign_up, name='sign_up'),
     path('login', accountviews.login, name='login'),
     
