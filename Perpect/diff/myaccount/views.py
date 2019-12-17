@@ -11,10 +11,10 @@ def sign_up(request):
     if request.method == 'POST' :
         if request.POST['password1'] == request.POST['password2'] :
             try :
-                user = User.object.get(username=request.POST['username'])
+                user = User.objects.get(username=request.POST['username'])
                 return render(request, 'sign_up.html', {'error':'Username has already been taken'})
             except User.DoesNotExist:
-                user = User.object.create_user(request.POST['username'],password=request.POST['password1'])
+                user = User.objects.create_user(request.POST['username'],password=request.POST['password1'])
                 auth.login(request, user)
                 return redirect('grid')              # user생성시 로그인 후 메인화면으로 이동
         else:
