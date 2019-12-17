@@ -10,17 +10,27 @@ def sign_up(request):
     # 계정생성 전 중복 체크 필요함!!
     if request.method == 'POST' :
         if request.POST['password1'] == request.POST['password2'] :
-            user = User.object.create_user(request.POST['username'],request.POST['password1'])
-            auth.login(request, user)
-            return redirect('home')
-    return render(request, 'sign_up.html')
+            try :
+                user = User.object.get(username=request.POST['username'])
+                return render(request, 'sign_up.html', {'error':'Username has already been taken'})
+            except User.DoesNotExist:
+                user = User.object.create_user(request.POST['username'],password=request.POST['password1'])
+                auth.login(request, user)
+                return redirect('grid')              # user생성시 로그인 후 메인화면으로 이동
+        else:
+            return render(request, 'sign_up.html', {'error':'Passwords must match'})
+    else:
+        return render(request, 'sign_up.html')
 
 def login(request):
 
-    #if request.method == 'POST' :
-    #    username = request.POST['username']
-    #    password = request.POST['password']
-    #    user = user.Authenticate(request, usernaem=username, password=password)
-        
-
-    return render(request, 'login.html')
+    if request.method == 'POST' :
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.Authenticate(request, usernaem=username, password=password)
+        if user is not None:
+            auth.login(request, user)
+        else :
+            return render(request, 'login.html', {'error': 'username or password is incorrect'})
+    else: 
+        return render(request, 'login.html')
