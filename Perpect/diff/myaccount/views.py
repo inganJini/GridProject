@@ -3,24 +3,35 @@ from django.contrib.auth.forms import UserCreationForm  # 장고에서 기본적
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth
+from .form import MyUserForm
 # Create your views here.
 
 
 def sign_up(request):
     # 계정생성 전 중복 체크 필요함!!
-    if request.method == 'POST' :
-        if request.POST['password1'] == request.POST['password2'] :
-            try :
-                user = User.objects.get(username=request.POST['username'])
-                return render(request, 'sign_up.html', {'error':'Username has already been taken'})
-            except User.DoesNotExist:
-                user = User.objects.create_user(request.POST['username'],password=request.POST['password1'])
-                auth.login(request, user)
-                return redirect('grid')              # user생성시 로그인 후 메인화면으로 이동
-        else:
-            return render(request, 'sign_up.html', {'error':'Passwords must match'})
+    #if request.method == 'POST' :
+    #    if request.POST['password1'] == request.POST['password2'] :
+    #        try :
+    #            user = User.objects.get(username=request.POST['username'])
+    #            return render(request, 'sign_up.html', {'error':'Username has already been taken'})
+    #        except User.DoesNotExist:
+    #            user = User.objects.create_user(request.POST['username'],password=request.POST['password1'])
+    #            auth.login(request, user)
+    #            return redirect('grid')              # user생성시 로그인 후 메인화면으로 이동
+    #    else:
+    #        return render(request, 'sign_up.html', {'error':'Passwords must match'})
+    #else:
+    #    return render(request, 'sign_up.html')
+    if request.method =="POST":
+        myform = MyUserForm(request.POST)
+        if myform.is_valid() :
+            myform.save()
     else:
-        return render(request, 'sign_up.html')
+        myform = MyUserForm()
+
+    context = {"myform": myform}
+
+    return render(request, 'sign_up.html', context)
 
 def login(request):
 
