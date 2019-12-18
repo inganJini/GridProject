@@ -24,8 +24,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', views.home, name = 'home'),
     path('', gridviews.grid, name='grid'),
+    path('mygrid', gridviews.mygrid, name='mygrid'),
     path('sign_up', accountviews.sign_up, name='sign_up'),
-    path('login', accountviews.login, name='login'),
+    #path('login', accountviews.login, name='login'),
+    path('login/', LoginView.as_view(), name='login'),
+    #path('logout', accountviews.logout, name='logout'),
+    path('logout/', LogoutView.as_view(), name='logout'),
     
     path('social_account/login', include('allauth.urls')),
 ]

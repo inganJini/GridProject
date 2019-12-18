@@ -26,11 +26,19 @@ def login(request):
 
     if request.method == 'POST' :
         username = request.POST['username']
-        password = request.POST['password']
-        user = auth.Authenticate(request, usernaem=username, password=password)
+        password = request.POST['password1']
+        user = auth.authenticate(request, usernaem=username, password=password)
         if user is not None:
             auth.login(request, user)
         else :
             return render(request, 'login.html', {'error': 'username or password is incorrect'})
     else: 
         return render(request, 'login.html')
+
+# LogoutView.as_view() 사용할 경우 아래 함수 필요없음
+#def logout(request):
+#
+#    if request.method == 'POST' :
+#        auth.logout(request)
+#        return redirect('grid')
+#    return redirect(request, 'account/sign_up.html')

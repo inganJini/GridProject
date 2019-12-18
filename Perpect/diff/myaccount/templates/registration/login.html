@@ -10,7 +10,12 @@
 
 <h1>Login</h1>
 
-<form method="POST" action="{% url 'login'%}">
+<form method="POST">
+        {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Login">
+</form>
+<!-- <form method="POST" action="{% url 'login'%}">
     {% csrf_token %}
     Username:
     <br>
@@ -22,6 +27,6 @@
     <br>
     <br>
     <input class="btn btn-primary" type="submit" value="Login">
-</form>
+</form> -->
 
 {% endblock %}

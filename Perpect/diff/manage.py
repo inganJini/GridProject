@@ -18,4 +18,6 @@ def main():
 
 
 if __name__ == '__main__':
+    # 환경변수 설정으로 setting 파일 경로 잡는 법
+    # os.environ.setdefault("DJANGO_SETTINGS", diff.setting.development)
     main()
