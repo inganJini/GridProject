@@ -26,10 +26,14 @@ def sign_up(request):
         myform = MyUserForm(request.POST)
         if myform.is_valid() :
             myform.save()
+            #auth.login(request,myform.user)    # 저장후 로그인
+            return redirect('grid')            # 로그인 후 메인페이지
+        else:
+            return redirect('sign_up.html')   # 유효성 검사 체크 실패시 다시 회원가입 화면
     else:
         myform = MyUserForm()
 
-    context = {"myform": myform}
+    context = {'myform': myform}
 
     return render(request, 'sign_up.html', context)
 

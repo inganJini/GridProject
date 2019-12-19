@@ -6,11 +6,17 @@
 
 <form method="POST" action="{% url 'sign_up' %}">
     {% csrf_token %}
-    <!-- {{myform}} -->
+    <!-- {{myform.as_p}} -->
 
     {%for i in myform%}
+    
     {{i.label}} {{i}}
+    <br>
+
     {%endfor%}
+
+    <input class="btn btn-primary" type="submit" value="Sign Up!">
+
     <!-- Username: -->
     <!-- <br> -->
     <!-- <input name="username" type="text" value=""> -->

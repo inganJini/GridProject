@@ -27,7 +27,7 @@ urlpatterns = [
     path('mygrid', gridviews.mygrid, name='mygrid'),
     path('sign_up', accountviews.sign_up, name='sign_up'),
     #path('login', accountviews.login, name='login'),
-    path('login/', LoginView.as_view(), name='login'),
+    path('login/', LoginView.as_view(), name='login'),     # auth의 내장 함수 사용할 경우
     #path('logout', accountviews.logout, name='logout'),
     path('logout/', LogoutView.as_view(), name='logout'),
     
