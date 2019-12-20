@@ -18,7 +18,7 @@
     
     <script>
   
-        const init = document.getElementById("grid_content");
+        const init = document.getElementById("main");
       
         if (init != null){
           
@@ -52,7 +52,7 @@
                 <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">환영합니다. {{ user.username }} 님!</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{% url 'mygrid' %}">My Page</a>
+                    <a class="dropdown-item" href="{% url 'mygrid' user.username %}">My Page</a>
                     <a class="dropdown-item" href="{% url 'logout' %}">Log Out</a>
                 </div>
             </li>

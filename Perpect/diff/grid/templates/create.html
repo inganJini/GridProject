@@ -1,0 +1,202 @@
+{% extends 'home.html' %}
+
+{% block content %}
+
+{% if error %}
+{{ error }}
+<br>
+<br>
+{% endif %}
+<br>
+<div class="crud_btn">
+      <!-- <input class="btn btn-primary" type="submit" value="추가" href="{% url 'create' %}"> -->
+</div>
+<br>
+<form method="POST">
+{% csrf_token%}
+    <div class="insert_main">
+        <div class="insert_grid">
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" id="insert_key" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+        </div>
+        <div class="insert_grid">
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" id="insert_key" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+        </div>
+        <div class="insert_grid">
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                        
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" id="insert_key" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+        </div>
+        <div class="insert_grid">
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" id="insert_key" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+        </div>
+        <div class="insert_grid">
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" id="main_key" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+        </div>
+        <div class="insert_grid">
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" id="insert_key" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+        </div>
+        <div class="insert_grid">
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" id="insert_key" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+        </div>
+        <div class="insert_grid">
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" id="insert_key" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+        </div>
+        <div class="insert_grid">
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" id="insert_key" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+                <div class="detail col" contenteditable="true">
+                </div>
+        </div>
+   </div>
+</form>
+
+{% endblock %}

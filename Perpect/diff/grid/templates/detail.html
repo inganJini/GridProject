@@ -8,14 +8,13 @@
 <br>
 {% endif %}
 <br>
-<div class="crud_btn">
+<!-- <div class="crud_btn">
       <a class="btn btn-primary"href="{% url 'create' %}">추가</a>
-</div>
+</div> -->
 <br>
 
       <div class="main">
             {% for i in my_key %}
-            <div class="detail_link"><a href="{% url 'detail' i %}">자세히...</a></div>
             <div class="grid" id="grid{{i}}">
                   <!-- <div class="grid_header">
                         <img src="" alt="">

@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', views.home, name = 'home'),
     path('', gridviews.grid, name='grid'),
-    path('mygrid', gridviews.mygrid, name='mygrid'),
+    path('mygrid/<str:username>', gridviews.mygrid, name='mygrid'),
+    path('detail/<str:key>', gridviews.detail, name='detail'),
     path('sign_up', accountviews.sign_up, name='sign_up'),
     #path('login', accountviews.login, name='login'),
     path('login/', LoginView.as_view(), name='login'),     # auth의 내장 함수 사용할 경우
@@ -32,4 +33,8 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     
     path('social_account', include('allauth.urls')),
+
+    path('create', gridviews.create, name='create'),
+    #path('update', gridviews.update, name='update'),
+    #path('delete', gridviews.delete, name='delete'),
 ]
