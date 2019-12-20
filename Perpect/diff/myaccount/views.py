@@ -8,28 +8,15 @@ from .form import MyUserForm
 
 
 def sign_up(request):
-    # 계정생성 전 중복 체크 필요함!!
-    #if request.method == 'POST' :
-    #    if request.POST['password1'] == request.POST['password2'] :
-    #        try :
-    #            user = User.objects.get(username=request.POST['username'])
-    #            return render(request, 'sign_up.html', {'error':'Username has already been taken'})
-    #        except User.DoesNotExist:
-    #            user = User.objects.create_user(request.POST['username'],password=request.POST['password1'])
-    #            auth.login(request, user)
-    #            return redirect('grid')              # user생성시 로그인 후 메인화면으로 이동
-    #    else:
-    #        return render(request, 'sign_up.html', {'error':'Passwords must match'})
-    #else:
-    #    return render(request, 'sign_up.html')
     if request.method =="POST":
         myform = MyUserForm(request.POST)
         if myform.is_valid() :
+            #user = myform.save()
             myform.save()
-            #auth.login(request,myform.user)    # 저장후 로그인
+            #auth.login(request, user)    # 저장후 로그인
             return redirect('grid')            # 로그인 후 메인페이지
         else:
-            return redirect('sign_up.html')   # 유효성 검사 체크 실패시 다시 회원가입 화면
+            return redirect('sign_up')   # 유효성 검사 체크 실패시 다시 회원가입 화면
     else:
         myform = MyUserForm()
 
