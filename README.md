@@ -1,7 +1,7 @@
 # Project
 ### 다르다 (만다라트)
 
-##### Hackathon Repository입니다.
+##### GridProject Repository입니다.
 
 ##### 프로젝트 CLONE 방법
 
@@ -11,7 +11,7 @@
 
 > cd Perpect
 
-> git clone https://github.com/psybex/Hackathon.git
+> git clone https://github.com/psybex/GridProject.git
 
 
 
@@ -42,9 +42,3 @@ UI : 모바일웹에서도 깔끔하게 떨어지게!!!!
 ##### UI 디자인 사이트
 
 [디자인 사이트 url](https://www.draw.io)
-
-##### super user 정보
-
-> admin // diff9663
->
-> python manage.py changepassword 사용자id
